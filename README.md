@@ -5,7 +5,7 @@ Links
 * Storm author [Nathan Marz's github repo](https://github.com/nathanmarz/storm)
 * Storm tutorial [mbonacci](https://github.com/mbonaci/mbo-storm)
 
-Funcionalidad
+Funcionalidad:
 Realizara un Ranking de los usuarios que mas tweets estan enviando y también construira un ranking de las diez palabras mas repetidas.
 
 Para instalar:

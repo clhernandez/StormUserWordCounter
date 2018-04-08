@@ -4,14 +4,8 @@
 	<groupId>cl.usach.piinf.storm</groupId>
 	<artifactId>storm-twitter-word-count</artifactId>
 	<packaging>jar</packaging>
-	<version>2.0.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>Storm Twitter Word Count</name>
-	<parent>
-		<artifactId>storm</artifactId>
-		<groupId>org.apache.storm</groupId>
-		<version>2.0.0-SNAPSHOT</version>
-		<relativePath>../../pom.xml</relativePath>
-	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<provided.scope>provided</provided.scope>
@@ -52,14 +46,19 @@
 		<dependency>
 			<groupId>org.apache.storm</groupId>
 			<artifactId>storm-core</artifactId>
-			<version>${project.version}</version>
-			<scope>${provided.scope}</scope>
+			<version>1.0.2</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.storm</groupId>
 			<artifactId>flux-core</artifactId>
-			<version>${project.version}</version>
+			<version>1.0.2</version>
 		</dependency>
+	    <dependency>
+	        <groupId>org.mongodb</groupId>
+	        <artifactId>mongodb-driver</artifactId>
+	        <version>3.3.0</version>
+	    </dependency>
 	</dependencies>
 
 	<build>
@@ -69,8 +68,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.0</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -105,6 +104,11 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<directory>/config</directory>
+			</resource>
+		</resources>
 	</build>
 
 	<repositories>

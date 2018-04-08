@@ -52,7 +52,7 @@ public class TwitterSampleSpout extends BaseRichSpout {
 		
 		ConfigurationBuilder cb = new ConfigurationBuilder();
 		Properties twitterProperties = new Properties();
-		File twitter4jPropsFile = new File("config/twitter4j.properties");
+		File twitter4jPropsFile = new File("/home/clhernandez/repos/StormWordUsersCount/config/twitter4j.properties");
 		
 		if (!twitter4jPropsFile.exists()) {
 			logger.error(
